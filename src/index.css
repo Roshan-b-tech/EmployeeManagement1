@@ -3,18 +3,39 @@
 @tailwind utilities;
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
-  from { transform: translateX(-20px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .animate-fade-in {
@@ -48,4 +69,28 @@
 
 .gradient-bg {
   background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+/* Responsive utility classes */
+@media (max-width: 640px) {
+  .table-cell-text-sm {
+    font-size: 0.875rem;
+  }
+
+  .mobile-full-width {
+    width: 100%;
+  }
+
+  .mobile-padding {
+    padding: 0.75rem;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* Common transitions for mobile interactions */
+.mobile-menu-transition {
+  transition: all 0.3s ease;
 }
